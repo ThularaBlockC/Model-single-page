@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tharanya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="ThaaranyaMainPic.jpg">
+<style>
+    /* @font-face {
+        font-family:adine ;
+        src: url(Fonts/Adine\ Kirnberg.ttf);
+    } */
+    @font-face {
+        font-family: cedar;
+        src: url(Fonts/CedarvilleCursive-Regular.ttf);
+    }
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: cedar;
+  overflow-x: hidden;
+}
+.hero-image {
+  height: 5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  font-size:25px;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.455641631652661) 46%, rgba(0,0,0,0) 100%);
+  transform: translate(-50%, -50%);
+  color : rgb(255, 255, 255);
+  opacity: 1;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; 
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.selected {
+  border: 2px solid rgb(7, 7, 7);
+}
+
+.table.center {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 10%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+#selected-image-container #selected-image {
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  background-size: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#column-select {
+  -ms-flex: 25%; 
+  flex: 25%;
+  max-width: 80%;
+  padding: 0 4px;
+  margin-left: 130px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.column-select img {
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+button {
+  background-color: #020202;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border:#020202;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: block;
+  width: 130px;
+  margin: 10px auto 0px auto;
+}
+
+.info-image{
+  margin-left: 30px;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.conact{
+  margin-left: 130px;
+  align-items: center;
+}
+
+.fa {
+  margin-left: 130px;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  font-size: 30px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #c44408;
+  color: rgb(250, 18, 238);
+}
+
+
+@media screen and (max-width: 800px) {
+  .hero-text {
+    margin-top: 90px;
+    font-size:20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    #column-select {
+    max-width: 250px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #column-select {
+    max-width: 150px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .table-img-col, .table-btn-col {
+    width: 50%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .info-image {
+    max-width: 250px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .conact {
+    margin-left: 30px;
+  }
+}
+</style>
+<body>
+    <div class="hero-image">
+        <img src="ThaaranyaMainPic.jpg" >
+        <div class="hero-text">
+          <h1 style="font-size:40px">Tharanya</h1>
+          <p>press the palms of hands together under the chin and in front of the chest while slightly bowing my head, I'm wishing to you "āyubōwan" from Sri Lankan to Melbourne</p>
+        </div>
+      </div>
+
+<div class="header">
+  <h1>Gallery of Tharanya</h1>
+  <!-- <p>Resize the browser window to see the responsive effect.</p> -->
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img class="selection" src="ThaaranayaImage26.jpg" style="width:100%">
+    <img class="selection" src="Thaaranya imageOne.jpg" style="width:100%">
+    <img class="selection" src="Thaaranya imageTwo.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage10.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage25.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage27.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="selection" src="ThaaranyaImage12.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage28.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage21.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage19.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage22.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage5.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img class="selection" src="ThaaranyaImage7.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage8.jpg" style="width:100%">   
+    <img class="selection" src="ThaaranyaImage14.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage15.jpg" style="width:100%">  
+    <img class="selection" src="ThaaranyaImage17.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage9.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage16.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="selection" src="ThaaranyaImage18.jpg" style="width:100%">   
+    <img class="selection" src="ThaaranyaImage20.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage13.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage3.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage6.jpg" style="width:100%">
+    <img class="selection" src="ThaaranyaImage23.jpg" style="width:100%">
+  </div>
+</div>
+
+<div class="header">
+    <h2>Edit Gallery Images</h2>
+    <p>Select a Gallery Image by clicking image, then select a filter that suits for your project</p>
+</div>
+
+<div style="overflow-x:auto;">
+  <table class="center">
+    <tr>
+     <th>
+        <img id="column-select" src="ThaaranyaImage23.jpg" alt="your-image-alt">
+     </th>
+    <th>
+        <div id="button">
+            <button id="grayscale-button">Grayscale</button>
+            <button id="sepia-button">Sepia</button>
+            <button id="invert-button">Invert</button>
+            <button id="brightness-button">Brightness</button>
+            <button id="saturate-button">Saturate</button>
+            <button id="blur-button">Blur</button>
+            <button id="hueRotate-button">HueRotate</button>
+            <button id="contrast-button">contrast</button>
+            <button id="opacity-button">Opacity</button>
+        </div>
+    </th> 
+   </tr>
+  </table>
+</div>
+
+<div class="header"> 
+    <h3>Born and raised in Colombo with Sri Lanka descent. Currently bases in Melbourne with a passion for art in all forms and around the world! Faith and family keep me grounded yet passionate to explore all of my potential. I am excited to share my journey with you.</h3>
+</div>
+
+<div style="overflow-x:auto;">
+    <table>
+      <tr>
+      <th>
+        <img class="info-image" src="Thaaranya imageOne.jpg" alt="your-image-alt">
+      </th>
+      <th>
+          <div id="button">
+              <p>Height 160cm 5.3inches</p>
+              <p>Bust 78cm 2.6inches</p>
+              <p>Waist 66cm 2.2inches</p>
+              <p>Hip 75cm 2.5inches</p>
+          </div>
+      </th> 
+      </tr>
+    </table>
+  </div>
+  <div class="conact">
+    <h3>Contact me </h3>
+    <a href="https://facebook.com/tharanya.nethmi" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/nethmiii____/?hl=en" class="fa fa-instagram"></a>
+    <p>Contact number: (+61)450887313</p>
+    <p>Email address: tharanyapremarathna@gmail.com</p>
+    <br/>
+    <br/>
+    <br/>
+</div>
+
+<script>
+    const row = document.querySelectorAll(".selection");
+
+//const dropZone = document.querySelector("#drop-zone");
+const selectedImage = document.querySelector("#column-select");
+const grayscaleButton = document.querySelector("#grayscale-button");
+const sepiaButton = document.querySelector("#sepia-button");
+const invertButton = document.querySelector("#invert-button");
+const brightnessButton = document.querySelector("#brightness-button");
+const saturateButton = document.querySelector("#saturate-button");
+const blurButton = document.querySelector("#blur-button");
+const hueRotateButton = document.querySelector("#hueRotate-button");
+const contrastButton = document.querySelector("#contrast-button");
+const opacityButton = document.querySelector("#opacity-button");
+        // Handle image selection
+        row.forEach((selection) => {
+        selection.addEventListener("click", (e) => {
+          const currentSelected = document.querySelector(".selected");
+          if (currentSelected) {
+            currentSelected.classList.remove("selected");
+          }
+          selection.classList.add("selected");
+          selectedImage.src = selection.src;
+        });
+      });
+
+      // Handle filter buttons
+      grayscaleButton.addEventListener("click", () => {
+        selectedImage.style.filter = "grayscale(100%)";
+      });
+
+      sepiaButton.addEventListener("click", () => {
+        selectedImage.style.filter = "sepia(100%)";
+      });
+
+      invertButton.addEventListener("click", () => {
+        selectedImage.style.filter = "invert(100%)";
+      });
+
+      brightnessButton.addEventListener("click", () => {
+        selectedImage.style.filter = "brightness(150%)";
+      });
+
+      saturateButton.addEventListener("click", () => {
+        selectedImage.style.filter = "saturate(150%)";
+      });
+
+      blurButton.addEventListener("click", () => {
+        selectedImage.style.filter = "blur(5px)";
+      });
+
+      hueRotateButton.addEventListener("click", () => {
+        selectedImage.style.filter = "hue-rotate(90deg)";
+      });
+
+      contrastButton.addEventListener("click", () => {
+        selectedImage.style.filter = "contrast(150%)";
+      });
+
+      opacityButton.addEventListener("click", () => {
+        selectedImage.style.filter = "opacity(50%)";
+      });
+</script>
+</body>
+</html>
